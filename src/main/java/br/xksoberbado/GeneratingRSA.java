@@ -35,11 +35,11 @@ public class GeneratingRSA {
     }
 
     @SneakyThrows
-    private static String decrypt(final String encrypted) {
+    private static String decrypt(final String text) {
         final var cipher = Cipher.getInstance(TRANSFORMATION);
         cipher.init(Cipher.DECRYPT_MODE, getKeyPair().getPrivate());
 
-        final var bytes = cipher.doFinal(Base64.getDecoder().decode(encrypted));
+        final var bytes = cipher.doFinal(Base64.getDecoder().decode(text));
 
         return new String(bytes, StandardCharsets.UTF_8);
     }
