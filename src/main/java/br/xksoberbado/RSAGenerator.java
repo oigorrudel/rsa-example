@@ -9,7 +9,7 @@ import java.security.KeyPairGenerator;
 import java.util.Base64;
 import java.util.Objects;
 
-public class GeneratingRSA {
+public class RSAGenerator {
 
     private static final String ALGORITHM = "RSA";
     private static final String TRANSFORMATION = "RSA/ECB/OAEPWithSHA-256AndMGF1Padding";
